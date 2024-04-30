@@ -24,8 +24,7 @@ describe('getDataNormalizedCtrl', () => {
         sinon.stub({ normalizeResponseData }, 'normalizeResponseData').returns(fakeNormalizedData);
     
         // Calling the controller function
-        const pepe= await getDataNormalizedCtrl(req, res, next);
-        console.log('pepe......',pepe,res.json)
+        await getDataNormalizedCtrl(req, res, next);
     
         // Expectations
         expect(res.status.calledWith(200)).to.be.true;

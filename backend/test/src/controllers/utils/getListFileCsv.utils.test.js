@@ -31,7 +31,6 @@ describe('getListFileCsv', () => {
 
     // Call the function under test
     const result = await getListFileCsv(downloadCsv, listNames);
-    console.log('result is ...',result)
     // Assertions
     expect(result).to.be.an('array').that.is.empty;
   });

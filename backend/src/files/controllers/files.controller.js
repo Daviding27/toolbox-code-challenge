@@ -28,11 +28,8 @@ export const getDataListCtrl = async (req, res, next) => {
     const repository = new FileRepository();
     // get List name from the external api
     const listFilesName = await repository.getListOfFiles();
-    console.log('aqui real', listFilesName)
-    if(!listFilesName) throw new Error()
     res.status(200).json(listFilesName);
   } catch (err) {
-    console.log('estoy aqui')
     return next(new InternalServerError());
   }
 };
