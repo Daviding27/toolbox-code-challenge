@@ -6,12 +6,8 @@
 
 1. Clone project
 2. `npm install`
-3. Change the file `.env.template` rename to `.env`
-4. Change the envoronment variables
-5. Launch the data base
+3. run: `npm start`
 
-```
+## Launch the App with docker
+
 docker-compose up -d
-```
-
-6. run: `npm start`

@@ -1,18 +1,38 @@
 import { InternalServerError } from '../../core/index.js';
 import FileRepository from '../repositories/files.repository.js';
-import { filterValidLines, getListFileCsv, normaliceResponseData } from './utils/index.js';
+import { filterValidLines, getListFileCsv, normalizeResponseData } from './utils/index.js';
 
-export const getDataNormaliced = async (req, res) => {
+export const getDataNormalizedCtrl = async (req, res, next) => {
+  try {
+    const { fileName } = req.query;
+    const repository = new FileRepository();
+
+    const listFilesName = fileName ? [fileName] : await repository.getListOfFiles();
+
+    // Fetch the list of files from an external API
+    const listFileCsv = await getListFileCsv(repository.downloadFile, listFilesName);
+
+   // Filter lines, keeping only those with valid format
+    const listFiltered = filterValidLines(listFileCsv);
+
+    // Normalize response data
+    const normalizedResponse = normalizeResponseData(listFiltered);
+    res.status(200).json(normalizedResponse);
+  } catch (err) {
+    return next(new InternalServerError());
+  }
+};
+
+export const getDataListCtrl = async (req, res, next) => {
   try {
     const repository = new FileRepository();
+    // get List name from the external api
     const listFilesName = await repository.getListOfFiles();
-    const listFileCsv = await getListFileCsv(repository.downloadFile, listFilesName);
-    const listFiltered =  filterValidLines(listFileCsv);
-    const normalicedResponse =  normaliceResponseData(listFiltered);
-
-    res.status(200).json(normalicedResponse);
+    console.log('aqui real', listFilesName)
+    if(!listFilesName) throw new Error()
+    res.status(200).json(listFilesName);
   } catch (err) {
-    console.log('err is ....', err);
-    throw new InternalServerError(err + ', ');
+    console.log('estoy aqui')
+    return next(new InternalServerError());
   }
 };

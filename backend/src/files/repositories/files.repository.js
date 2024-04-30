@@ -13,13 +13,10 @@ class FileRepository {
   }
 
   async downloadFile(fileName) {
-    console.log(`${apiBaseUrl}${downloadFilePath(fileName)}`);
 
     const response = await axios.get(`${apiBaseUrl}${downloadFilePath(fileName)}`, {
       headers: { Authorization: apiKey },
     });
-    console.log('----------------------------------');
-
     return response.data;
   }
 }

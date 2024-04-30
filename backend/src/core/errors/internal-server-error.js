@@ -7,7 +7,7 @@ class InternalServerError extends CustomError {
     Object.setPrototypeOf(this, InternalServerError.prototype);
   }
   serializeErrors() {
-    return [{ message: this.data + ' Internal Server Error' }];
+    return [{ message: this.data + 'Internal Server Error' }];
   }
 }
 const _InternalServerError = InternalServerError;
