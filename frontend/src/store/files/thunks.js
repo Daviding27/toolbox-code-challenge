@@ -12,10 +12,10 @@ export const getAllFiles = () => {
       dispatch(setTableLines(normalizedData));
     } catch (err) {
       const errorMessage = getResponseError(err);
-      dispatch(setErrorMessage(errorMessage));
+      dispatch(setErrorMessage(errorMessage ??''));
 
       setTimeout(() => {
-        dispatch(setErrorMessage(undefined));
+        dispatch(setErrorMessage(''));
       }, 10);
     }
     dispatch(setIsFetching(false));
@@ -31,10 +31,10 @@ export const findDataByFilename = (fileName) => {
       dispatch(setTableLines(normalizedData));
     } catch (err) {
       const errorMessage = getResponseError(err);
-      dispatch(setErrorMessage(errorMessage));
+      dispatch(setErrorMessage(errorMessage ??''));
 
       setTimeout(() => {
-        dispatch(setErrorMessage(undefined));
+        dispatch(setErrorMessage(''));
       }, 10);
     }
     dispatch(setIsFetching(false));

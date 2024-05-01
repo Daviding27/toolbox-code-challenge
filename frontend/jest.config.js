@@ -1,2 +1,6 @@
-export const setupFiles = ['./jest.setup.js'];
-export const transformIgnorePatterns = [];
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js'],
+    transformIgnorePatterns: [],
+  };
+  

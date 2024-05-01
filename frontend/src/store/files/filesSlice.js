@@ -5,7 +5,7 @@ export const filesSlice = createSlice({
   initialState: {
     tableLines: undefined,
     isFetching: false,
-    errorMessage: undefined,
+    errorMessage: '',
   },
   reducers: {
     setTableLines: (state, { payload }) => {
@@ -19,7 +19,7 @@ export const filesSlice = createSlice({
     },
 
     setErrorMessage: (state, { payload }) => {
-      state.errorMessage = payload;
+      state.errorMessage = payload ??'';
     },
   },
 });

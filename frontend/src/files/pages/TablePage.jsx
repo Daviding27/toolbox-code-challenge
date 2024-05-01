@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { Navbar } from '../components/Navbar';
@@ -7,11 +7,10 @@ import { SearchFileComponent } from '../components/SearchFileComponent';
 import { FetchingDataView } from '../components/FetchingDataView';
 
 export const TableLinesPage = () => {
-  const { errorMessage, isFetching } = useSelector((state) => state.files);
-  const dispatch = useDispatch();
+  const { isFetching, errorMessage } = useSelector((state) => state.files );
 
   useEffect(() => {
-    if (errorMessage) {
+    if (errorMessage && errorMessage !='') {
       Swal.fire('Error', errorMessage, 'error');
     }
   }, [errorMessage]);

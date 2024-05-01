@@ -1,1 +1,9 @@
-export const presets = [['@babel/preset-react', { runtime: 'automatic' }]];
+module.exports = {
+    //plugins: ["babel-plugin-transform-import-meta"],
+  
+    presets: [
+      ['@babel/preset-env', { targets: { esmodules: true } }],
+      ['@babel/preset-react', { runtime: 'automatic' }],
+    ],
+  };
+  
