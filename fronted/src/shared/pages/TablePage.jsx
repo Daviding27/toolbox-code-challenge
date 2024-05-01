@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Grid } from '@mui/material';
 import { Navbar } from '../components/Navbar';
 import { useEffect } from 'react';
 
@@ -21,16 +20,15 @@ export const TableLinesPage = () => {
 
 
   return (
-    <Grid container spacing={2}> 
-      <Grid item xs={12}> 
-      
-        <Navbar />
-        {tableLines.map((data, count) => (
-          <div key={count}>
+    <div>
+      <Navbar />
+      <div>
+        {tableLines && tableLines.map((data, count) => (
+          <div key={count}> {/* Assuming data has a unique id */}
             {data.name.toString()}
           </div>
         ))}
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };

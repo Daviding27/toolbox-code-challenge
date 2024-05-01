@@ -4,6 +4,10 @@
 .primary-color {
     color: #D91438 !important;
   }
+
+  .navbar.primary-color {
+    background-color: #D91438 !important;
+  }
   
   .green-color {
     color: #008000 !important;
