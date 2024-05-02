@@ -7,7 +7,7 @@
 This application is designed to fetch CSV data from an external API, format it, and display it in a table. Users can also search for specific filenames.
 
 ## Backend stack
-- nodeJS 14x
+- nodeJS 14.21.3
 - javascript
 - Express
 - mocha/chai
