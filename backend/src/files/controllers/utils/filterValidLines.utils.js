@@ -1,9 +1,7 @@
-
 // Filters out lines from the provided list of CSV data that meet specific conditions.
 // Only lines with valid data matching the defined criteria are included in the result.
 
 export const filterValidLines = (listFileCsv) => {
-
   const regex = /^[0-9a-fA-F]{32}$/;
 
   const arrayFiltered = [];
@@ -15,8 +13,6 @@ export const filterValidLines = (listFileCsv) => {
       lines.shift();
 
       lines.map(async (line) => {
-
-        
         const dataLine = line.split(',');
         if (
           dataLine.length == 4 &&
@@ -25,10 +21,9 @@ export const filterValidLines = (listFileCsv) => {
           !isNaN(+dataLine[2]) &&
           typeof +dataLine[2] == 'number' &&
           regex.test(dataLine[3])
-        ){
+        ) {
           array.push(line);
         }
-         
       });
     }
     if (array.length > 0) arrayFiltered.push(array);

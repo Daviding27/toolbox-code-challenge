@@ -1,4 +1,3 @@
-
 // Splits a CSV data line into an array and extracts the text, number, and hex values.
 const normalizeLineArray = (data) => {
   return data.map((dataLine) => {
@@ -13,7 +12,6 @@ const normalizeLineArray = (data) => {
 
 // Normalizes CSV data received as an array of arrays into a structured format.
 export const normalizeResponseData = (data) => {
-
   return data.map((csvInfo) => {
     return {
       file: csvInfo[0].split(',')[0],

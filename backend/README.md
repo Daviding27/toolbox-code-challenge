@@ -11,7 +11,6 @@ This API retrieves data from an external API and reformats it for exposition.
 - **GET /files/list**: Retrieves the list of available files.
 - **GET /files/data**: Retrieves the CSV-formatted data from the external API. Optionally, it can retrieve data for a specific file by providing the `fileName` query parameter.
 
-
 ### API Usage
 
 1. Clone the project.
@@ -20,6 +19,5 @@ This API retrieves data from an external API and reformats it for exposition.
 4. Access the application at [http://localhost:3030](http://localhost:3030).
 
 ### Testing
+
 - `npm test`
-
-

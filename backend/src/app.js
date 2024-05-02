@@ -3,7 +3,6 @@ import cors from 'cors';
 import { NotFoundError, errorHandler } from './core/index.js';
 import router from './routes.js';
 
-
 const app = express();
 
 //middlewares

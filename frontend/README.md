@@ -16,4 +16,5 @@ This frontend application allows users to view CSV information in a table format
 6. Access the application at [http://localhost:3031](http://localhost:3031).
 
 ### Testing
+
 - `yarn test`

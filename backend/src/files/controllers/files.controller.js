@@ -2,7 +2,6 @@ import { InternalServerError } from '../../core/index.js';
 import FileRepository from '../repositories/files.repository.js';
 import { filterValidLines, getListFileCsv, normalizeResponseData } from './utils/index.js';
 
-
 // This controller to retrieve all the CSV-formatted data from the external API
 // or only the file name CSV data if this was settend in the query param
 export const getDataNormalizedCtrl = async (req, res, next) => {
@@ -20,12 +19,10 @@ export const getDataNormalizedCtrl = async (req, res, next) => {
     // Filter lines, keeping only those with valid format
     const listFiltered = filterValidLines(listFileCsv);
 
-
     // Normalize response data
     const normalizedResponse = normalizeResponseData(listFiltered);
 
     res.status(200).json(normalizedResponse);
-
   } catch (err) {
     return next(new InternalServerError());
   }

@@ -1,7 +1,7 @@
-const { describe, it } = require('mocha');
-const { expect } = require('chai');
-const request = require('supertest');
-const { app } = require('../../src/app.js');
+import { describe, it } from 'mocha';
+import { expect } from 'chai';
+import request from 'supertest'; 
+import { app } from '../../src/app.js';
 
 describe('Express App', () => {
   it('should respond with a 404 error message for undefined routes', async () => {
