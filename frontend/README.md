@@ -11,8 +11,9 @@ This frontend application allows users to view CSV information in a table format
 1. Clone Project
 2. `yarn install`
 3. Run the tests: `yarn test`
-4. Launch: `yarn dev`
-5. Access the application at [http://localhost:3031](http://localhost:3031).
+4. Ensure that backend APIs are successfully launched and operational runing in port 3030.
+5. Launch: `yarn dev`
+6. Access the application at [http://localhost:3031](http://localhost:3031).
 
 ### Testing
 - `yarn test`

@@ -4,7 +4,7 @@
 
 ## ToolBox code challenge
 
-This is a fullstack app to fetch CSV infor from external api, formated and show it in a table, you can look for a especif file name too.
+This application is designed to fetch CSV data from an external API, format it, and display it in a table. Users can also search for specific filenames.
 
 ## Backend stack
 - nodeJS 14x
@@ -20,8 +20,10 @@ This is a fullstack app to fetch CSV infor from external api, formated and show 
 
 ### API Usage
 
-1. Clone project
-2. Run `docker-compose up -d`
+1. Clone the project from the remote repository.
+2. Run ``docker-compose up -d`` to start the Docker containers in detached mode.
+3. Ensure that both APIs are successfully launched and operational.
+4. Open the frontend URL in your web browser to access the user interface.
 
 - Access the backend application at [http://localhost:3030](http://localhost:3030).
 - Access the frontend application at [http://localhost:3031](http://localhost:3031).

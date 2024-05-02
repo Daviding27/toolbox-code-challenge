@@ -13,6 +13,7 @@ const normalizeLineArray = (data) => {
 
 // Normalizes CSV data received as an array of arrays into a structured format.
 export const normalizeResponseData = (data) => {
+
   return data.map((csvInfo) => {
     return {
       file: csvInfo[0].split(',')[0],

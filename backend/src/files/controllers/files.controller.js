@@ -20,6 +20,7 @@ export const getDataNormalizedCtrl = async (req, res, next) => {
     // Filter lines, keeping only those with valid format
     const listFiltered = filterValidLines(listFileCsv);
 
+
     // Normalize response data
     const normalizedResponse = normalizeResponseData(listFiltered);
 
