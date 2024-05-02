@@ -21,7 +21,7 @@ This application is designed to fetch CSV data from an external API, format it, 
 ### API Usage
 
 1. Clone the project from the remote repository.
-2. Run ``docker-compose up -d`` to start the Docker containers in detached mode.
+2. Run ``docker-compose up --build -d`` to start the Docker containers in detached mode.
 3. Ensure that both APIs are successfully launched and operational.
 4. Open the frontend URL in your web browser to access the user interface.
 5. Access the frontend application at [http://localhost:3031](http://localhost:3031).
