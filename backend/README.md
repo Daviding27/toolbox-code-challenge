@@ -14,7 +14,7 @@ This API retrieves data from an external API and reformats it for exposition.
 ### API Usage
 
 1. Clone the project.
-2. Select v14x node version `nvm use 14.21.3`.
+2. Select v14.21.3 node version `nvm use 14.21.3`.
 3. Install dependencies: `npm install`.
 4. Start the application: `npm start`.
 5. Access the application at [http://localhost:3030](http://localhost:3030).
