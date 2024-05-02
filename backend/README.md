@@ -2,9 +2,22 @@
   <a href="https://nodejs.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="200" alt="Node Logo" /></a>
 </p>
 
+## Toolbox backend API
 
+This API retrieves data from an external API and reformats it for exposition.
 
-1. Clone project
-2. `npm install`
-3. run: `npm start`
+### Endpoints
 
+- **GET /files/list**: Retrieves the list of available files.
+- **GET /files/data**: Retrieves the CSV-formatted data from the external API. Optionally, it can retrieve data for a specific file by providing the `fileName` query parameter.
+
+### API Usage
+
+1. Clone the project.
+2. Install dependencies: `npm install`.
+3. Start the application: `npm start`.
+4. Access the application at [http://localhost:3030](http://localhost:3030).
+
+### Testing
+
+- `npm test`
