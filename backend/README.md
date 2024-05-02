@@ -19,4 +19,7 @@ This API retrieves data from an external API and reformats it for exposition.
 3. Start the application: `npm start`.
 4. Access the application at [http://localhost:3030](http://localhost:3030).
 
+### Testing
+- `npm test`
+
 
