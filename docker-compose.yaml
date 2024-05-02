@@ -4,8 +4,8 @@ services:
   node-app:
     container_name: toolbox-backend
     build:
-      context: .
-      dockerfile: /backend/Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - '3030:3030'
     restart: always
@@ -13,8 +13,8 @@ services:
   react-app:
     container_name: toolbox-frontend
     build:
-      context: .
-      dockerfile: /frontend/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - '3031:3031'
     restart: always

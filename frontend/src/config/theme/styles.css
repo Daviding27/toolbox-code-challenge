@@ -1,0 +1,27 @@
+/* styles.css */
+
+/* Colores */
+.primary-color {
+  color: #d91438 !important;
+}
+
+.navbar.primary-color {
+  background-color: #d91438 !important;
+}
+
+.green-color {
+  color: #008000 !important;
+}
+
+.secondary-color {
+  color: #a52a2a !important;
+}
+
+/* Otros estilos */
+.tertiary-bg {
+  background-color: #373737 !important;
+}
+
+.error-bg {
+  background-color: #ff5b5b !important;
+}
