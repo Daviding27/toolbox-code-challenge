@@ -28,8 +28,8 @@ This application is designed to fetch CSV data from an external API, format it, 
 
 #### Note
 
-1. To know more about frontend app go to Frontend folder 
-2. To know more about backend app go to Backend folder README
+1. To know more about frontend app go to ./frontend/README.md 
+2. To know more about backend app go to ./backend/README.md 
 
 3. To access the backend app
 - Access the backend application at [http://localhost:3030](http://localhost:3030).
