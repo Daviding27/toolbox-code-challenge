@@ -1,4 +1,6 @@
 import { CustomError } from './custom-error.js';
+
+// Custom error class for handling "Internal Server" errors in the application.
 class InternalServerError extends CustomError {
   constructor(data = '') {
     super('Internal Server Error');
