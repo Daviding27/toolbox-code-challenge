@@ -44,7 +44,7 @@ describe('getDataNormalizedCtrl', () => {
 
   it('should return normalized response of a specific file name', async () => {
     // Mocking request, response, and next objects
-    const req = { query: { fileName: 'test1A.csv' } };
+    const req = { query: { fileName: 'test2.csv' } };
     const res = { status: sinon.stub().returnsThis(), json: sinon.spy() };
     const next = sinon.spy();
 

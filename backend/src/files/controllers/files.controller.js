@@ -1,4 +1,4 @@
-import { InternalServerError } from '../../core/index.js';
+import { InternalServerError, NotFoundError } from '../../core/index.js';
 import FileRepository from '../repositories/files.repository.js';
 import { filterValidLines, getListFileCsv, normalizeResponseData } from './utils/index.js';
 
@@ -22,7 +22,11 @@ export const getDataNormalizedCtrl = async (req, res, next) => {
     // Normalize response data
     const normalizedResponse = normalizeResponseData(listFiltered);
 
+    if (fileName && normalizedResponse.length == 0) return next(new NotFoundError('File '));
+
+    // Response
     res.status(200).json(normalizedResponse);
+
   } catch (err) {
     return next(new InternalServerError());
   }

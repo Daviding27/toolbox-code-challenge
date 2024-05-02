@@ -1,4 +1,4 @@
 module.exports = {
-  spec: 'test/**/*.test.js', 
-  timeout: 5000 
+  spec: 'test/**/*.test.js',
+  timeout: 5000,
 };
