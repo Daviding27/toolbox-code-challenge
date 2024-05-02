@@ -24,7 +24,14 @@ This application is designed to fetch CSV data from an external API, format it, 
 2. Run ``docker-compose up -d`` to start the Docker containers in detached mode.
 3. Ensure that both APIs are successfully launched and operational.
 4. Open the frontend URL in your web browser to access the user interface.
+5. Access the frontend application at [http://localhost:3031](http://localhost:3031).
 
+#### Note
+
+1. To know more about frontend app go to Frontend folder 
+2. To know more about backend app go to Backend folder README
+
+3. To access the backend app
 - Access the backend application at [http://localhost:3030](http://localhost:3030).
-- Access the frontend application at [http://localhost:3031](http://localhost:3031).
+
 
