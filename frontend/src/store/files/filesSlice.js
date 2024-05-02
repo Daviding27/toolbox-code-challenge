@@ -19,7 +19,7 @@ export const filesSlice = createSlice({
     },
 
     setErrorMessage: (state, { payload }) => {
-      state.errorMessage = payload ??'';
+      state.errorMessage = payload ?? '';
     },
   },
 });

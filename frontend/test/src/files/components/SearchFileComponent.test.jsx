@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { useDispatch } from 'react-redux';
 import { SearchFileComponent } from '../../../../src/files/components/SearchFileComponent';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 jest.mock('react-redux', () => ({
   useDispatch: jest.fn(),
@@ -36,7 +36,6 @@ describe('SearchFileComponent', () => {
     fireEvent.click(getByText('Search'));
     expect(dispatchMock).toHaveBeenCalledWith(expect.any(Function));
   });
-
 
   it('should dispatch getAllFiles when reload button is clicked', () => {
     const { getByText } = render(<SearchFileComponent />);

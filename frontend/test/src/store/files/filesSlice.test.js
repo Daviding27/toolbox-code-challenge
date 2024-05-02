@@ -1,4 +1,10 @@
-import { filesSlice, setIsFetching, setTableLines, resetTableLines, setErrorMessage } from '../../../../src/store/files/filesSlice';
+import {
+  filesSlice,
+  setIsFetching,
+  setTableLines,
+  resetTableLines,
+  setErrorMessage,
+} from '../../../../src/store/files/filesSlice';
 
 const { reducer } = filesSlice;
 
@@ -19,7 +25,10 @@ describe('filesSlice reducer', () => {
   });
 
   test('should handle setTableLines action', () => {
-    const tableLines = [{ id: 1, name: 'Line 1' }, { id: 2, name: 'Line 2' }];
+    const tableLines = [
+      { id: 1, name: 'Line 1' },
+      { id: 2, name: 'Line 2' },
+    ];
     const newState = reducer(initialState, setTableLines(tableLines));
     expect(newState.tableLines).toEqual(tableLines);
   });

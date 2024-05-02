@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { useSelector } from 'react-redux';
 import { TableComponent } from '../../../../src/files/components/TableComponent';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 jest.mock('react-redux', () => ({
   useSelector: jest.fn(),

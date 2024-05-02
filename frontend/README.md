@@ -4,8 +4,6 @@
 
 1. Clone Project
 2. `yarn install`
-3. Clone file `.env.template` and rename to `.env`
-4. Clone file `.env.production.template` and rename to `.env.production`
-5. Change de environments variables
-6. Launch: `yarn run dev`
-7. Production: `yarn build` and use the 'dist' folder
+3. Run the tests: `yarn test`
+4. Launch: `yarn dev`
+5. Production: `yarn build` and use the 'dist' folder

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { FetchingDataView } from '../../../../src/files/components/FetchingDataView';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
 describe('FetchingDataView component', () => {
   it('should render with default message when no message is provided', () => {
